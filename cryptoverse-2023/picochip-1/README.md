@@ -206,7 +206,7 @@ def gen_op(self) -> list:
 
 We now have the power states of the program after it finished:
 
-```
+```py
 - picochip init
 60x success
 - generate p
@@ -317,31 +317,45 @@ Now we have the numbers below p and q and what check they failed at:
 6x success (19)
 1x fallback
 10x success (37)
-2x fallback
+1x fallback
+0x success (3)
+1x fallback
 1x success (5)
 1x fallback
 60x success (miller_rabin)
-2x fallback
+1x fallback
+0x success (3)
+1x fallback
 2x success (7)
 1x fallback
 3x success (11)
-2x fallback
+1x fallback
+0x success (3)
+1x fallback
 17x success (67)
 1x fallback
 60x success (miller_rabin)
-2x fallback
+1x fallback
+0x success (3)
+1x fallback
 12x success (43)
 1x fallback
 1x success (5)
-2x fallback
+1x fallback
+0x success (3)
+1x fallback
 4x success (13)
 1x fallback
 41x success (191)
-2x fallback
+1x fallback
+0x success (3)
+1x fallback
 1x success (5)
 1x fallback
 6x success (19)
-2x fallback
+1x fallback
+0x success (3)
+1x fallback
 61x success  # p calculated
 
 ===== calculate q =====
@@ -392,4 +406,198 @@ Now we have the numbers below p and q and what check they failed at:
 
 I seperated the 2x failure into 1x failure, 0x success, 1x failure because 0x success just means that it was divisible by 3.
 
-TODO FINISH WRITEUP
+For q, we can use the equations to solve for q.
+
+```py
+5x success (17)
+1x fallback
+0x success (3)
+1x fallback
+16x success (61)
+1x fallback
+1x success (5)
+1x fallback
+0x success (3)
+1x fallback
+25x success (103)
+1x fallback
+61x success  # q calculated
+```
+
+Turns into
+
+```py
+(v-2)%103 == 0
+(v-4)%3 == 0
+(v-6)%5 == 0
+(v-8)%61 == 0
+(v-12)%17 == 0
+```
+
+We have a bunch of these equations.
+
+I made a program to solve for numbers where all of these equations are true and find the values p and q using enumeration, guessing, and brute force
+
+```py
+from Crypto.Util.number import *
+
+
+first_60_primes = [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53,
+                   59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127,
+                   131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193,
+                   197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269,
+                   271, 277, 281, 283]
+
+lowr = 2 ** 35
+uppr = 2 ** 36
+divis_check_p = {4: 19, 10: 191, 12: 13, 18: 43, 24: 67, 28: 11, 40: 37}
+divis_check_q = {2: 103, 8: 61, 12: 17, 18: 113, 20: 127, 24: 7, 30: 229}
+p = None
+q = None
+
+
+def multiply(vals):
+    total = 1
+    for val in vals:
+        total *= val
+    return total
+
+
+start_p = 1
+diff_p = 1
+for _ in range(len(divis_check_p)):
+    divis_check = {}
+    index = 0
+    for add_divis in divis_check_p:
+        divis_check[add_divis] = divis_check_p[add_divis]
+        if index == _:
+            break
+        index += 1
+    first_find = None
+    second_find = None
+    lowest_valid = False
+    bounds = False
+    prime = False
+    new_check = -1
+    for multiple in range(start_p, uppr, diff_p):
+        new_check = multiple
+        lowest_valid = True
+        for offset in divis_check:
+            for _2 in range(2, divis_check[offset]):
+                if (new_check - offset) % _2 == 0:
+                    lowest_valid = False
+            if (new_check - offset) % divis_check[offset] != 0:
+                break
+        else:
+            bounds = lowr <= new_check <= uppr
+            prime = isPrime(new_check)
+            if first_find is None:
+                first_find = new_check
+                continue
+            if second_find is None:
+                second_find = new_check
+                break
+    if prime and lowest_valid and bounds:
+        print(f"p: {new_check}")
+        break
+    diff_p = second_find-first_find
+    start_p = first_find-diff_p
+
+
+start_q = 1
+diff_q = 1
+for _ in range(len(divis_check_q)):
+    divis_check = {}
+    index = 0
+    for add_divis in divis_check_q:
+        divis_check[add_divis] = divis_check_q[add_divis]
+        if index == _:
+            break
+        index += 1
+    first_find = None
+    second_find = None
+    lowest_valid = False
+    bounds = False
+    prime = False
+    new_check = -1
+    for multiple in range(start_q, uppr, diff_q):
+        new_check = multiple
+        lowest_valid = True
+        for offset in divis_check:
+            for _2 in range(2, divis_check[offset]):
+                if (new_check - offset) % _2 == 0:
+                    lowest_valid = False
+            if (new_check - offset) % divis_check[offset] != 0:
+                break
+        else:
+            bounds = lowr <= new_check <= uppr
+            prime = isPrime(new_check)
+            if first_find is None:
+                first_find = new_check
+                continue
+            if second_find is None:
+                second_find = new_check
+                break
+    if prime and lowest_valid and bounds:
+        print(f"q: {new_check}")
+        break
+    diff_q = second_find-first_find
+    start_q = first_find-diff_q
+```
+This solves values p and q:
+
+```
+p: 66491128391
+q: 62337717991
+```
+
+We then use something random I found on stackoverflow (p, q, e, ct -> original number)
+
+```py
+import math
+
+def getModInverse(a, m):
+    if math.gcd(a, m) != 1:
+        return None
+    u1, u2, u3 = 1, 0, a
+    v1, v2, v3 = 0, 1, m
+
+    while v3 != 0:
+        q = u3 // v3
+        v1, v2, v3, u1, u2, u3 = (
+            u1 - q * v1), (u2 - q * v2), (u3 - q * v3), v1, v2, v3
+    return u1 % m
+
+def main():
+
+    p = 66491128391
+    q = 62337717991
+    ct = 3059648962482294740345
+    e = 0x10001
+    n = p*q
+
+    # compute n
+    n = p * q
+
+    # Compute phi(n)
+    phi = (p - 1) * (q - 1)
+
+    # Compute modular inverse of e
+    d = getModInverse(e, phi)
+
+    print("n:  " + str(d))
+
+    # Decrypt ciphertext
+    pt = pow(ct, d, n)
+    print("pt: " + str(pt))
+
+if __name__ == "__main__":
+    main()
+```
+
+We get `123356883987807` as the text
+
+We can decode this by turning it into hex and then reading it
+The text is `p1C@-_`. This is the inside of the flag
+
+`cvctf{p1C@-_}` is the flag.
