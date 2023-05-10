@@ -14,6 +14,6 @@ Here, I used `Sys.command "ls";;` to get the `ls` command output.
 
 Then, I saw a folder named system.
 
-I did `Sys.command "ls system"` and saw a flag file
+I did `Sys.command "ls system";;` and saw a flag file
 
 I used `cat` command on flag file and got the flag.
