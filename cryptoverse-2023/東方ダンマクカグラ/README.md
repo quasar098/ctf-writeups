@@ -260,4 +260,6 @@ def main():
 The description said to "clear the game", so I removed the part where the character collides with the bullet and waited for 7 minutes for the music to go away. 
 I did not get the flag, so I spent a lot of time searching in the other files.
 I did not see that the `time.time() - start <= 1800`, meaning you had to wait 30 whole minutes to see a binary message encoded with bullets. 
-I am too lazy to solve the flag myself, but to solve it, you parse the bullet patterns at the end of the main.py (very long)
+There are 98 binary characters (1 and 0), and 98 is not divisble by 8, so it is not the full flag.
+If we take a look at the ASCII code for the letter "c" (the first letter of all flags), then we see that it is `01100011` and the first part of the binary sequence we have is `1100011`, so we add 0 before each code and get the flag.
+The flag is `cvctf{R3IMu<3}`
