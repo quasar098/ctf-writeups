@@ -17,3 +17,5 @@ Then, I saw a folder named system.
 I did `Sys.command "ls system";;` and saw a flag file
 
 I used `cat` command on flag file and got the flag.
+
+The flag is `cvctf{J41L3d_OOOO-C4mL@@}`
