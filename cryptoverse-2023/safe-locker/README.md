@@ -33,8 +33,8 @@ Module().then(function(mod) {
 
 I didn't want to decompile the web assembly.
 
-Here, we brute force password_checker because there are only 10,000,000 options total, so we can do this pretty easily.
+Here, we brute force password_checker because there are only 100,000,000 options total, so we can do this pretty easily.
 
 I found the combo to be `86094317`, so the flag is `cvctf{86094317}`
 
-To save memory, I did 1,000,000 combos at a time and changed the last digit manually in my bruteforce for index.html. Then, I refreshed the page with the next digit.
+To save memory, I did 10,000,000 combos at a time and changed the last digit manually in my bruteforce for index.html. Then, I refreshed the page with the next digit.
