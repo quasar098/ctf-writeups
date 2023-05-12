@@ -43,6 +43,8 @@ contract ReverseMe {
 }
 ```
 
+## solution
+
 This used solidity (ethereum stuff I think).
 
 I used Remix IDE to test stuff out and read documentation to help with debugging.
