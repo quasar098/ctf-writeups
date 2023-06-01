@@ -81,6 +81,8 @@ if __name__ == "__main__":
     app.run('0.0.0.0', 13000)
 ```
 
+## problem
+
 after taking a look, we can see that this is vulnerable to sql injection.<br>
 the backslash does nothing because `\\'` in python is handled later as `\'` by sql which equals just a regular `'` (i think)
 
