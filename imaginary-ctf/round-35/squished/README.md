@@ -1,0 +1,53 @@
+# squished
+
+## problem
+
+I like my primes squished together... like sardines!
+
+```py
+from Crypto.Util.number import getPrime, bytes_to_long
+from sympy import nextprime
+
+p = getPrime(300)
+q = nextprime(p)
+n = p*q
+e = 65537
+m = bytes_to_long(b"ictf{*****************}")
+c = pow(m, e, n)
+
+print(f"{n = }")
+print(f"{e = }")
+print(f"{c = }")
+
+# n = 3417924731862237979099543277022401181699593590681359167549644670755637992704425854909584209434342121450905350603869635601202352641950436471717542505649946611735174306831301912341217
+# e = 65537
+# c = 1149021656548978788218854652369877518170617647190055856025132586370974242325444914971248625788980478350290796936114178821957171481255971433016355497807721298124144677233505359448727
+```
+
+## solution
+
+because the primes are right next to each other, we know that the sqrt(n) is very very close to those two primes because q is the next prime after p, so they are close to sqrt(p\*q)
+
+```py
+from math import isqrt
+from Crypto.Util.number import long_to_bytes
+
+n = 3417924731862237979099543277022401181699593590681359167549644670755637992704425854909584209434342121450905350603869635601202352641950436471717542505649946611735174306831301912341217
+
+close = isqrt(n)
+close = (close//2)*2+1
+while True:
+    if n % close == 0:
+        p, q = close, n//close
+        break
+    close += 2
+
+c = 1149021656548978788218854652369877518170617647190055856025132586370974242325444914971248625788980478350290796936114178821957171481255971433016355497807721298124144677233505359448727
+
+phi = (p-1)*(q-1)
+d = pow(65537, -1, phi)
+print(long_to_bytes(pow(c, d, n)))
+```
+
+the flag is `ictf{just_your_typical_rsa_challenge}`
+
