@@ -45,6 +45,11 @@ enc = encrypt(seed, flag)
 print(f'enc = {binascii.hexlify(enc)}')
 ```
 
+output.txt
+```
+enc = b'b0cb631639f8a5ab20ff7385926383f89a71bbc4ed2d57142e05f39d434fce'
+```
+
 ## solution
 
 here, we can see that a secret integer between 0 and 2**32 inclusive is used as the seed, and it is reseeded and then XORed by the original string to get the final string
