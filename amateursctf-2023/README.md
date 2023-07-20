@@ -26,7 +26,7 @@ i ended up placing 7/69 (90%) on high school bracket, and 48/914 (95%) overall, 
 | [Censorship](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/censorship)                  | misc      | 4/10           | 10/10          | mental (pyjail)lness                                  |
 | [Censorship lite](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/censorship-lite)             | misc      | 5/10           | 10/10          | good                                                  |
 | [Painfully deep flag](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/painfully-deep-flag)         | forensics | 6/10           | 10/10          | i hate forensics, too guessy for sure                 |
-| [ScreenshotGuesser](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/screenshotguessr)           | osint     | 6/10           | 10/10          | would be a pain if i didnt know about wigle           |
+| [ScreenshotGuesser](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/screenshotguesser)           | osint     | 6/10           | 10/10          | would be a pain if i didnt know about wigle           |
 | [rusteze](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/rusteze)                     | rev       | 6/10           | 10/10          | binja op                                              |
 | [elfcrafting-v1](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/elfcrafting-v1)              | pwn       | 3/10           | 10/10          | easiest pwn chall ever                                |
 | [trick question](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/trick-question)              | rev       | 5.5/10         | 10/10          | good chall!                                           |
@@ -39,7 +39,7 @@ i ended up placing 7/69 (90%) on high school bracket, and 48/914 (95%) overall, 
 | [whiteboard](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/whiteboard)                  | algo      | 6.5/10         | 10/10          | z3 op once more                                       |
 | [flagchecker](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/flagchecker)                 | rev       | 7/10           | 10/10          | best chall by far, scratch very good                  |
 | [gophers-revenge](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/gophers-revenge)             | web       | 8/10           | 10/10          | url encoding is a real pain                           |
-| [volcano](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/volcano)                     | rev       | 4/10           | 2/10 (no flag) | no clue how to multiple numbers, still learning       |
+| volcano                     | rev       | 4/10           | 2/10 (no flag) | no clue how to multiple numbers, still learning       |
 | [gitint 7d](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/gitint-7d)                   | misc      | 10/10          | 9/10 (no flag) | worst chall by far                                    |
 | hex-converter               | pwn       | 4/10           | 4/10 (no flag) | no clue what to do                                    |
 | zipper                      | forensics | 3/10           | 2/10 (no flag) | only got the "red herring XD" :(                      |
