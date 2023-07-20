@@ -1,6 +1,6 @@
 # amateursCTF 2023
 
-keep in mind i did this ctf solo (all of my team members are busy), but I spent pretty much all my time for the 5 days of the ctf
+i did this ctf solo (all of my team members are busy), and I spent pretty much all my time for the 5 days of the ctf
 
 i managed to solve like 27/66, which i think is pretty good for someone of my calibre (D tier calibre, especially compared to others)
 
