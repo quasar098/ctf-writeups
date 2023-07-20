@@ -8,3 +8,4 @@ ctf writeups
 - defcon ctf 2023
 - [imaginary ctf](https://github.com/quasar098/ctf-writeups/tree/main/imaginary-ctf)
 - [cryptoctf 2023](https://github.com/quasar098/ctf-writeups/tree/main/cryptoctf-2023)
+- [amateursctf 2023](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023)
