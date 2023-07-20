@@ -240,3 +240,5 @@ i ended up just solving the cps chall even though it was worth 0 points because 
 i eventually realized that "+" looked like a "t", and also put a space char instead of a regular one because it is special char
 
 the flag is `amateursCTF{ye5._+h1s_1s_g0pher_h3ll}`
+
+this was, however, the hardest chall i solved and i am extremely proud of myself for solving it
