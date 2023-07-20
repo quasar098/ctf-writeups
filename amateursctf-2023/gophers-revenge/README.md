@@ -202,7 +202,10 @@ to change the 3rd item, we need to input newlines into the first writeinfo strin
 
 then, we need to fake a gopher item and give it a selector with a URL that redirects to where we want it to go
 
-my payload was `gopher://amt.rs:31290/1/submit/?test=%0a0q%0a0wdwdq%09URL:https%3A%2F%2Fcps%2eamt%2Ers%2fregister.php%0a`<br>
+my payload was `gopher://amt.rs:31290/1/submit/?test=%0a0q%0a0wdwdq%09URL:https%3A%2F%2Fcps%2eamt%2Ers%2fregister.php%0a`
+
+the way that it worked was that i saw the source for gopher protocol [here](https://git.mills.io/prologic/go-gopher/src/branch/master/gopher.go) and was able to construct a fake list item to match how the source would read it
+
 we have to redirect to an amt.rs site because of the following code in bot.go:
 
 ```go
