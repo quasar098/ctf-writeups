@@ -49,7 +49,7 @@ what i mean is from `"a"[flag[0]=="a"]` to `"a"[flag[0]==flag[2]]`
 
 if the output is an error (prints zzzzzzz), then we know that those two characters are equal
 
-and use intuition and guesswork to deduce the flag
+then i used intuition and guesswork, along with [crossword solver](https://www.crosswordsolver.org/) to deduce the flag
 
 ```py
 import socket
