@@ -14,6 +14,8 @@ taking a look at
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/cfedcde7-7633-43f9-8a29-b7a5a69dc841)
 
+(yes, i'm using notepad)
+
 we can see it is possible to maybe do path traversal to read any file in the system. however:
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/f552b16b-ad53-4cf6-832a-fa7689c4d55a)
