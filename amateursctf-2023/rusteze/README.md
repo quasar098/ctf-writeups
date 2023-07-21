@@ -8,25 +8,25 @@ download [here](https://amateurs-prod.storage.googleapis.com/uploads/c5baf81b72d
 
 taking a look at the main function, we input a line from stdin
 
-![image](https://github.com/quasar098/ctf-writeups/assets/70716985/21bd3fa9-5b9b-44b6-8d87-56dc03aa7bb0)
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/ac338c3a-045c-49fc-88da-53623714b2e9)
 
 also, the flag is 38 chars long
 
 then, we declare some stuff
 
-![image](https://github.com/quasar098/ctf-writeups/assets/70716985/030a69e4-6a47-4293-8d39-79a697c0a0ff)
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/53b3bcc7-8fc9-4f15-b537-6ac85620eee6)
 
 then, we copy the input from the stdin'd line to the buffer, while xoring by the previously defined variables and then rotating the bits
 
-![image](https://github.com/quasar098/ctf-writeups/assets/70716985/422b98cd-10ec-4b56-bc59-f417c3078c89)
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/94c6a3fa-aa97-4e4e-8098-bcb730632da3)
 
 then we check to see if the output is correct
 
-![image](https://github.com/quasar098/ctf-writeups/assets/70716985/e0cea3a3-bf3e-477a-aef4-08b6d8c9baa4)
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/045f52a6-ef52-4534-b258-6186578d20d6)
 
 final check code
 
-![image](https://github.com/quasar098/ctf-writeups/assets/70716985/926e50b7-b343-4df7-85d1-f85d35a37dea)
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/d91d2a69-770a-482e-af93-1474ea420a71)
 
 solve script
 
