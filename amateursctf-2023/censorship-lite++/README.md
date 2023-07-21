@@ -1,5 +1,7 @@
 # censorship-lite++
 
+you may want to read my [censorship-lite](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/censorship-lite) writeup if you havent already (for background + better understanding)
+
 ## problem
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/65b625a5-31fd-44c4-9dbf-91f4ac241070)
