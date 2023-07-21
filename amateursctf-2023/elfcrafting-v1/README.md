@@ -4,11 +4,11 @@
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/164e221d-58e8-404b-ad5c-dc02b5fdbd72)
 
-see Dockerfile, chall files
+see Dockerfile, chall files in this folder
 
 ## solution
 
-we know the flag is in `/app/flag.txt`, first of all
+we know the flag is in `/app/flag.txt`, because of the Dockerfile
 
 next, we take a look at the chall binary in binja
 
