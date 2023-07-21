@@ -160,7 +160,7 @@ else:
 
 now we have something to work with
 
-can't exactly remember what i did here, but i think i was able to turn the bytes string into a bytecode dump of some sort
+can't exactly remember what i did here, but i think i was able to turn the function into a bytecode dump of some sort
 
 ```py
 Name:              check
