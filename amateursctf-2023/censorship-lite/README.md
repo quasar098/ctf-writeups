@@ -1,10 +1,12 @@
 # censorship lite
 
+you may want to read my [censorship](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/censorship) writeup for background knowledge
+
 ## problem
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/9b52555e-eb00-4671-898d-1efbaa164e90)
 
-```
+```py
 #!/usr/local/bin/python
 from flag import flag
 
@@ -21,9 +23,11 @@ for _ in [flag]:
 
 ## solution
 
-here, a lot more chars a disallowed
+here, a lot more chars a disallowed, notably the number characters
 
-luckily, we stil have access to ord, and we have access to the errors, so we can test if a boolean is true by checking a one-char string with index of the boolean (true=1, false=0)
+we can emulate numbers by subtracting the ascii value of integers using `ord` function
+
+we have access to the errors, so we can test if a boolean is true by checking a one-char string with index of the boolean (true=1=error big time!!!, false=0=nothing happens)
 
 ```py
 import socket
@@ -60,6 +64,6 @@ while True:
 # amateursCTF{sh0uldv3_r3strict3D_p4r3nTh3ticaLs_1nst3aD}
 ```
 
-we check the ascii value of each char in the flag against a number from 0-255, and then use a one-char string being indexed to get the flag
+we check the ascii value of each char in the flag against each number 0-255, and then get the letter at an index of a one-char string (`"a"[index]`) to get the flag via error detection
 
-defo overengineered solution
+defo overengineered solution, but really close to the [censorship-lite++](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/censorship-lite++) solution
