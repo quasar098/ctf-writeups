@@ -10,6 +10,8 @@ also gitint sucks btw
 
 i ended up placing 7/69 (90%) on high school bracket, and 48/914 (95%) overall, which i think is not bad
 
+had to heavily abuse [cyberchef](https://gchq.github.io/CyberChef/) and [text-format-wizard](https://quasar.name/text-format-wizard/)
+
 | chall name                  | category  | time spent/10  | completion/10  | personal comments                                     |
 |-----------------------------|-----------|----------------|----------------|-------------------------------------------------------|
 | [cps remastered](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/cps-remastered)              | web       | 7/10           | 10/10          | php sucks so much                                     |
