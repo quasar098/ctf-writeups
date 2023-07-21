@@ -70,7 +70,7 @@ we start with the numbers 8 and 33, and add numbers until we reach the goal
 
 it took me a long time to find the solution, but we can figure out the two numbers `a,b` that construct `n=2a-b` easily
 
-i first used this script here to get various numbers from 8 and 33:
+i first used this script here to get various random numbers `2a-b` assuming the board starts with 8 and 33:
 ```py
 from random import choice
 from json import dumps
@@ -89,8 +89,8 @@ for _ in range(200):
 print(wb)
 ```
 
-one key thing to realize is that we can make any number `25k+8`, k being an integer<br>
-another key thing to realize is that `|a+b| == 1` always. we can make a systems of equations in z3 and solve for `a` and `b` given a number `n`
+one key thing to realize is that it's possible to get to any number that is `25k+8`, k being an integer<br>
+another key thing to realize is that `|a+b| == 1` always, where a and b are the numbers from `n=8a+33b` for a given number n. we can make a systems of equations in z3 and solve for `a` and `b` given a number `n`
 
 ```py
 def get_a_b(goal: int):
@@ -115,11 +115,11 @@ def get_a_b(goal: int):
     return a*25+8, b*25+8
 ```
 
-here, we can get the `a`, `b` values that construct it for any goal integer<br>
-the `solver.add(50*z3a - 25*z3b + 8 == goal)` came from `n=2a-b`, and if `a` and `b` are guarenteed to be `25k+8`, we can replace them with `25k+8` for faster results<br>
-we need to find the chain that brings us from 8 and 33 to the goal integer
+here, we can get the `a`, `b` values that can construct any given integer (e.g. `58` -> `33,8`)<br>
+the `solver.add(50*z3a - 25*z3b + 8 == goal)` came from `n=2a-b`, and if `a` and `b` are guarenteed to be `25k+8`, we can replace them with `25k+8` to make z3 give us possible integers that can be on the whiteboard potentially<br>
+now, we need to find the chain that brings us from 8 and 33 to the goal integer
 
-this function constructs a "tree" (chains to get to goal) for a given goal
+this function constructs a set of numbers that make a "path" to get to a given goal number
 ```py
 def get_combos(n: int):
     redirects = {}
@@ -151,8 +151,8 @@ def get_combos(n: int):
     yield q[0], q[1]
 ```
 
-this function is a generator that yields the numbers in the correct order to get new numbers so 
-that every number that we morph will have already been written on the whiteboard once before, with the exception of -17, -42, 58, 33, and 8
+the function is a [generator function](https://wiki.python.org/moin/Generators) that [yields](https://www.geeksforgeeks.org/python-yield-keyword/) the numbers in the correct order to get new numbers so 
+that every number that we morph will have already been written on the whiteboard once before, with the exception of -17, -42, 58, 33, and 8, because those are easy to get to by hand
 
 we can use this to solve the thing:
 ```py
@@ -180,4 +180,4 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-again, takes a while, but it gets the flag
+takes a while, but it gets the flag, i think it was like `amateursCTF{hbd_bryan_gao!!!}` or smth cant remember
