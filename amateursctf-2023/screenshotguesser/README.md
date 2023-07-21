@@ -35,6 +35,6 @@ else:
 
 luckily i know about wigle.net from another ctf, so i was able to quickly find the location using the primavera 5g 2.4hz one
 
-i saw that it's in Tucson arizona
+i saw that it's in Tucson, Arizona
 
 i then found closeby places around it and then averaged the latlong positions and then got the flag
