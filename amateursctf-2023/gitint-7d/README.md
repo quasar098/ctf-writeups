@@ -38,6 +38,8 @@ def reduce(n_str: str, depth: int) -> list[str]:
 print(reduce(n, 0))
 ```
 
+this made me think that it was in one of the other markdown files but it wasn't
+
 i also tried looking at github api to see if anything was being hidden, which nothing was (see [here](https://api.github.com/repos/les-amateurs/more-CTFd-mods/pulls/2))
 
 i did not end up solving this one
