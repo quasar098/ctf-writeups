@@ -96,8 +96,8 @@ if __name__ == '__main__':
     main()
 ```
 
-the above file also includes the deobfuscation function to decode the thing, but that was custom made by me.
+the above file also includes the deobfuscation function to decode the thing, but that was made by me.
 
-this is apparently the TEA encryption, which i did not know existed
+this is apparently the [TEA](https://en.wikipedia.org/wiki/Tiny_Encryption_Algorithm), which i did not know existed or what it was
 
 anyways the flag is `amateursCTF{screw_scratch_llvm_we_code_by_hand_1a89c87b}`
