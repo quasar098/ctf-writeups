@@ -13,7 +13,7 @@ we know the first few characters of the flag are going to be `amateursCTF`, or `
 
 looking at the first 6 hex chars, we see that it is `610c61`, which follows the `ama` pattern
 
-we can see that two input chars xored outputs one char (`61^6d` -> `0c`, etc)
+we can see that two input chars xored outputs one char (`61^6d` -> `0c`) for each character pair `ab` in `abababab`
 
 we can use a script to solve this
 
