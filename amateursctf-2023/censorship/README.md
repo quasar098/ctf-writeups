@@ -59,4 +59,4 @@ $ exit
 Give code: ^C
 ```
 
-i did not overwrite any functions...
+i did not overwrite any functions. not even in my solution for the next challenge, [censorship-lite](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/censorship-lite)
