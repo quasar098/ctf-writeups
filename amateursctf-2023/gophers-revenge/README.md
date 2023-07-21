@@ -162,7 +162,7 @@ func Visit(gopherURL string) string {
 
 ## solution
 
-the original exploit in bot.go has been patched but there is a new exploit
+the original exploit in bot.go has been patched but there a different exploit we need to exploit
 
 the exploit is found in main.go:
 
