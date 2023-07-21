@@ -18,7 +18,7 @@ i already have a few years of experience with scratch and it was good to see scr
 
 i don't have screenshots of me solving this, but it took a few hours and a lot of skill
 
-anyways, we find that most of the bloat and code is for binary conversion, which doesn't exist in scratch by default, so custom implementations
+anyways, we find that most of the code is just bloat and prerequisites for binary conversion, which doesn't exist in scratch by default, so custom implementations in pink are there
 
 we can see that the scratch code is equivalent to 
 
