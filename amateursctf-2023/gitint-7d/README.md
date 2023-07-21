@@ -48,6 +48,13 @@ the actual solution was to see that the pull request message has been edited
 
 i never knew this was a feature, and i've always had to write a new message any time there is more info i have to say on github issues or a pull request
 
+i have always made multiple comments as shown here, as i never knew editing the comments was possible:
+
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/40dfe06c-1388-467a-ac91-da107227d842)
+
+
 this challenge makes me very very angry
+
+it's like asking me to find a setting in the intellij settings (impossible there are too many !!!!!)
 
 do not ever do github osint again pls
