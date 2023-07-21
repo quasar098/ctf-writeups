@@ -8,6 +8,8 @@
 
 ## solution
 
+first of all, why tf is it pronounced "latek"??, who decided it rolled off the tongue better than "latex"??????? angry
+
 we can try to use the `\input{<path>}` to inject any file on disk to the latex document
 
 however, there is an error so we cannot get the full flag:
