@@ -10,7 +10,7 @@ we can click to see the scratch code by clicking see inside as shown below
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/67cb7d88-6a2f-4928-a1af-3b3151ba5132)
 
-it looks like a nightmare, but we can clean things up by renaming variables via right click and dragging the top of code block chains (not blockchains!!!) around.
+it looks like a nightmare, but we can clean things up by renaming variables via right click and dragging the top of code-block chains (not blockchains!!!) around.
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/201f81c6-b05d-4159-9c2d-39aca56e11d6)
 
