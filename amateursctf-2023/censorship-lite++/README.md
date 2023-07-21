@@ -36,7 +36,8 @@ we barely have anything to use, can't even call any functions, so the above is (
 
 luckily, we can still create numbers by adding booleans together, and we can still create booleans because `func==func` is true always.
 
-we don't have access to parenthesis, but we can emulate them using lists and then getting the 0th index of the list by using `[vars!=vars][vars!=vars]`
+we don't have access to parenthesis, but we can emulate them using lists and then getting the 0th index of the list by using <br>
+`[<thing>][vars!=vars][vars!=vars]`. this is equivalent to `(<thing>)`
 
 my first solution was to compare parts of the flag with characters that we are allowed to use, but i 
 was in disbelief at how many characters were not allowed to be printed, so we could not check them to see if they were in the flag
