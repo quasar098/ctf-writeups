@@ -252,7 +252,7 @@ Variable names:
              24 BINARY_SUBSCR
         >>   26 RETURN_VALUE
 
-             # assert input[-1:] == "{"
+             # assert input[-1:] == "}"
   5          28 LOAD_FAST                0 (input)
              30 LOAD_CONST               4 (-1)
              32 BINARY_SUBSCR
@@ -267,7 +267,7 @@ Variable names:
         >>   48 BINARY_SUBSCR
              50 RETURN_VALUE
 
-             # input = input[12:-1]
+             # input = input[12:-1]  # whatever is inside the flag
   7          52 LOAD_FAST                0 (input)
              54 LOAD_CONST               1 (12)
              56 LOAD_CONST               4 (-1)
@@ -352,7 +352,7 @@ Variable names:
             178 CALL_METHOD              1
             180 STORE_FAST               0 (input)
 
-            # assert input[::-1] == "sn0h7YP"
+            # assert input[0][::-1] == "sn0h7YP"  # input[0] == "PY7h0ns"
 -108        182 LOAD_FAST                0 (input)
             184 LOAD_CONST              12 (0)
             186 BINARY_SUBSCR
