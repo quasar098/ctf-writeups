@@ -33,3 +33,5 @@ i know that `_` before a character means it is subscripted, so we can do the rev
 `amateursCTF{th3_l0w_budg3t_and_n0_1nstanc3ing_caus3d_us_t0_n0t_all0w_rc3_sadly}`
 
 i'm not quite sure what rc3 is. someone let me know if you figure it out
+
+edit: JUST FIGURED IT OUT IT IS REMOTE CODE EXECUTION I FEEL VERY SMART RN
