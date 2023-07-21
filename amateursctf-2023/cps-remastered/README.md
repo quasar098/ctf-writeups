@@ -4,6 +4,8 @@
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/99d601dd-3e2d-4616-a727-452e7f2daa03)
 
+see other files in folder
+
 ## solution
 
 one thing that was annoying about this challenge was setting up a local copy of the php server, which took way longer than it should've
