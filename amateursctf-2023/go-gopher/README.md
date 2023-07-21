@@ -137,9 +137,11 @@ here, we can see that a website is created by the bot to visit a gopher server a
 
 the main idea here, is that `strings.HasPrefix(u.Host, "amt.rs")` doesn't really work because we could have say `amt.rs.quasar.name` and totally bypass it
 
-you had to buy a domain name for this one to get the amt.rs fourth and third level domains, which made my like the challenge slightly less. luckily i already had a domain name to use
+you had to buy a domain name for this one to get the amt.rs fourth and third level domains, which made me like the challenge slightly less. luckily i already had a domain name to use
 
 anyways, i set up an http server using [this](https://gist.github.com/mdonkers/63e115cc0c79b4f6b8b3a6b797e485c7), and just ran the main.go server on my remote server as well
 
 it took me a while to set up, but i was able to get the flag by sending `gopher://amt.rs.quasar.name/1/submit/user` to the bot, 
 and changing the main.go file on my remote server to have `quasar.name` instead of `error.host`.
+
+edit: someone told me it's possible to use the solution for [gophers-revenge](https://github.com/quasar098/ctf-writeups/tree/main/amateursctf-2023/gophers-revenge) for this, but doesn't that defeat the entire point of having a second challenge??????
