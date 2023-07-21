@@ -28,8 +28,8 @@ $\input{/flag.txt}$
 ```
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/553638ab-779f-4dc3-ae20-bc62a7a0c14b)
 
-i'm not quite sure what rc3 is
-
 i know that `_` before a character means it is subscripted, so we can do the reverse to get the flag
 
 `amateursCTF{th3_l0w_budg3t_and_n0_1nstanc3ing_caus3d_us_t0_n0t_all0w_rc3_sadly}`
+
+i'm not quite sure what rc3 is. someone let me know if you figure it out
