@@ -86,4 +86,4 @@ def dump_zlibd_chunk(chnk):
 
 i did not end up finding it somehow, i do not know how
 
-i am very angry about it because i spent way too long on this one as well, and i have over 4k hours in the 'craft
+i am very angry about it because i spent way too long on this one as well, and i have over 4k hours in the 'craft so now i look like a minecraft failure :(
