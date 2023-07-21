@@ -39,14 +39,15 @@ luckily, we can still create numbers by adding booleans together, and we can sti
 we don't have access to parenthesis, but we can emulate them using lists and then getting the 0th index of the list by using <br>
 `[<thing>][vars!=vars][vars!=vars]`. this is equivalent to `(<thing>)`
 
-my first solution was to compare parts of the flag with characters that we are allowed to use, but i 
-was in disbelief at how many characters were not allowed to be printed, so we could not check them to see if they were in the flag
+my first solution was to compare parts of the flag with characters that we are allowed to use (e.g. `"a"[flag[0]=="a"]`, then check if error), 
+but i was in disbelief at how many characters were not allowed to be printed, so we could not check them to see if they were in the flag
 
 i got `amateursCTF{??_?????_??????_????s_???_??_??gh?_??gh?_??_flag_???_the_??gh?_????d_??_?????s?_??v??}` by checking chars that were not allowed in the flag
 
-my realization came eventually that we could compare letters in the flag to each other, instead of to string literals we make
+my realization came eventually that we could compare letters in the flag to each other, instead of to string literals we make<br>
+what i mean is from `"a"[flag[0]=="a"]` to `"a"[flag[0]==flag[2]]`
 
-for example: `"a"[_[num1]==_[num2]]`. if the output is an error (zzzzz), then we know that those two characters are equal
+if the output is an error (prints zzzzzzz), then we know that those two characters are equal
 
 and use intuition and guesswork to deduce the flag
 
