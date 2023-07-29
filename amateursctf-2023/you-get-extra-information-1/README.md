@@ -72,3 +72,5 @@ then, we just do standard RSA to decrypt
 b'amateursCTF{harder_than_3_operations?!?!!}'
 >>> 
 ```
+
+i am very aware that there is another quasar, and that they are much more skilled at crypto, in particular it looks like. i am very unlucky because as one of the organizers remarked, i will have to compete for name recognition,  which will be extremely annoying and will effectively outlaw me from any community with the other
