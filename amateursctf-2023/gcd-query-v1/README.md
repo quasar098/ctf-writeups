@@ -33,7 +33,7 @@ print(flag)
 
 we can use a janky version of Chinese Remainder Theorem to figure out the flag
 
-this took me a while to figure out, and was mostly based on long time of thinking that i cannot explain
+this took me a while to figure out, and was mostly based on long time of thinking
 
 ```py
 from pwn import *
