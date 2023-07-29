@@ -206,7 +206,33 @@ my payload was `gopher://amt.rs:31290/1/submit/?test=%0a0q%0a0wdwdq%09URL:https%
 
 this is equivalent to `<newline>q<newline>0wdwdq<tab>URL:https://cps.amt.rs/register.php<newline>`
 
-the way that it worked was that i saw the source for gopher protocol [here](https://git.mills.io/prologic/go-gopher/src/branch/master/gopher.go) and was able to construct a fake list item to match how the source would read it
+the way that it worked was that i saw the source for gopher protocol [here](https://git.mills.io/prologic/go-gopher/src/branch/master/gopher.go) and was able to construct a fake "itemtype" to match how the source would read it
+
+the way that go converts "items" into "strings" is by using this function:
+
+```go
+// MarshalText serializes an Item into an array of bytes
+func (i *Item) MarshalText() ([]byte, error) {
+	b := []byte{}
+	b = append(b, byte(i.Type))
+	b = append(b, []byte(i.Description)...)
+	b = append(b, TAB)
+	b = append(b, []byte(i.Selector)...)
+	b = append(b, TAB)
+	b = append(b, []byte(i.Host)...)
+	b = append(b, TAB)
+	b = append(b, []byte(strconv.Itoa(i.Port))...)
+
+	for _, s := range i.Extras {
+		b = append(b, TAB)
+		b = append(b, []byte(s)...)
+	}
+
+	b = append(b, []byte(CRLF)...)
+
+	return b, nil
+}
+```
 
 the list item format is `<type:1char><description:string><tab><URL:string><etc>`, so we can do `<0><wdwdq><tab><attacker url here><etc>`. the 0 is for type "item" btw
 
