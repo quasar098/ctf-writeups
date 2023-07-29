@@ -14,7 +14,11 @@ next, we take a look at the chall binary in binja
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/3f0cef33-74d3-43e0-8f2a-d1b0d3aebc0b)
 
+notably, it looks like it copies our binary to memory and executes it
+
 we can see that it does `fexecve`. i wonder what that is?
+
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/09b041ce-88bb-4c15-973c-ab0a7414b038)
 
 if we look at [docs](https://man7.org/linux/man-pages/man3/fexecve.3.html), we see that it is the same as execve but with a file descriptor, so reading from memory
 
