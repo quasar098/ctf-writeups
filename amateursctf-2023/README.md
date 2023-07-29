@@ -2,13 +2,11 @@
 
 i did this ctf solo (all of my team members are busy), and I spent pretty much all my time for the 5 days of the ctf
 
-i managed to solve like 27/66, which i think is pretty good for someone of my calibre (D tier calibre, especially compared to others)
+i managed to solve like 27/66, which i think is pretty good for someone of my calibre
 
 the most guessy ctf of them all
 
 also gitint sucks btw
-
-i ended up placing 7/69 (90%) on high school bracket, and 48/914 (95%) overall, which i think is not bad
 
 had to heavily abuse [cyberchef](https://gchq.github.io/CyberChef/) and [text-format-wizard](https://quasar.name/text-format-wizard/)
 
@@ -49,3 +47,5 @@ had to heavily abuse [cyberchef](https://gchq.github.io/CyberChef/) and [text-fo
 | OwO time pad                | crypto    | 6/10           | 3/10 (no flag) | eyes are weak                                         |
 | sanity                      | web       | 6/10           | 2/10 (no flag) | never heard of dom clobbering before                  |
 | legality                    | misc      | 5/10           | 1/10 (no flag) | sent in an email, got no reply ????????? huh ???      |
+
+i ended up placing 7/69 (90%) on high school bracket, and 48/914 (95%) overall, which i think is not bad
