@@ -29,3 +29,5 @@ for _ in range(len(data)//2):
     new += chr(a ^ b)
 print(new)
 ```
+
+we get the flag to be `amateursCTF{saves_space_but_plaintext_in_plain_sight_862efdf9}`
