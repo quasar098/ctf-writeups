@@ -135,6 +135,24 @@ func Visit(url string) string {
 
 here, we can see that a website is created by the bot to visit a gopher server and then send a post request with the flag in it.
 
+here is a vulnerable code:
+
+```go
+func Submit(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+	u, err := url.Parse(r.Form.Get("url"))
+	// hmm
+	if err != nil || !strings.HasPrefix(u.Host, "amt.rs") {
+		w.Write([]byte("Invalid url"))
+		return
+	}
+
+	w.Write([]byte(Visit(r.Form.Get("url"))))
+}
+```
+
+do you see it?
+
 the main idea here, is that `strings.HasPrefix(u.Host, "amt.rs")` doesn't really work because we could have say `amt.rs.quasar.name` and totally bypass it
 
 you had to buy a domain name for this one to get the amt.rs fourth and third level domains, which made me like the challenge slightly less. luckily i already had a domain name to use
