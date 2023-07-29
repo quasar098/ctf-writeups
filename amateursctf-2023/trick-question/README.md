@@ -707,7 +707,8 @@ Variable names:
             778 RETURN_VALUE
 ```
 
-we can see that different functions are being used here to check different parts of the flag
+we can see that different functions are being used here to check different parts of the flag<br>
+furthermore, i was not aware that it said that pycdc could demarshal code objects, and i dont really know what marshal is, so i ignore
 
 we can take a look at [this](http://vega.lpl.arizona.edu/python/lib/bytecodes.html) for more bytecode specifications
 
