@@ -12,6 +12,20 @@ here we go:
 
 they stole challs, which is downright unacceptable. it really doesn't take too much effort to make a unique chall, so i am disappointed
 
-anyways, here are the writeups for those who racked their brain on this extremely guessy ctf
+i would do writeups, but they dont even keep the challs up for some time after the ctf :(
 
-todo: table with links to writeups here
+| chall name            | category  | difficulty/10 (imo) | guessy-ness/10 |
+|-----------------------|-----------|---------------------|----------------|
+| sweet-nothing         | web       | 3                   | 9              |
+| why-are-types-weird   | web       | 6                   | 6              |
+| where-are-the-cookies | web       | 2                   | 3              |
+| gitcha                | web       | 6                   | 5              |
+| debugzero             | web       | 5                   | 4              |
+| gibberish             | forensics | 4                   | 4              |
+| whatThe               | rev       | 7                   | 4              |
+| missing               | osint     | 4                   | 6              |
+| magicplay             | forensics | 4                   | 6              |
+| hash roll             | forensics | 5                   | 7              |
+| easy peasy            | pwn       | 5                   | 7              |
+
+not writing writeups, sadly, but keeping this for future use / evidence / blackmail purposes
