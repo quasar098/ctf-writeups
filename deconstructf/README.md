@@ -10,6 +10,12 @@ here we go:
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/ce52c835-d48a-4c2d-ad29-3d44938c2df0)
 
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/885c2d74-9f51-45c2-a1e4-e9d282ed0377)
+
+for clarity, this is what they scored on the bad ctf bingo card:
+
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/d2ec9ae6-c97c-4fdc-b608-6a66739b7a5d)
+
 they stole challs, which is downright unacceptable. it really doesn't take too much effort to make a unique chall, so i am disappointed
 
 i would do writeups, but they dont even keep the challs up for some time after the ctf :(
