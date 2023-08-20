@@ -1,3 +1,4 @@
+{% raw %}
 # mac and cheese
 
 ## problem
@@ -72,3 +73,5 @@ uint magic_func(void) {
 What I did here was print the next magic number and try the C program over and over again until I win
 
 the flag was `cvctf{4666}`
+
+{% endraw %}
