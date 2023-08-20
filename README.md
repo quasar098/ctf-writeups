@@ -3,7 +3,7 @@ ctf writeups
 
 ## ctfs i've done
 
-- damctf 2023
+- damctf 2023 (no writeups)
 - [cryptoverse 2023](cryptoverse-2023)
 - defcon ctf 2023 (no writeups)
 - [imaginary ctf daily](imaginary-ctf)
