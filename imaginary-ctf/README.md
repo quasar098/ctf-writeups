@@ -7,3 +7,4 @@ ctf for people who are bad at ctfs i guess
 - [round 34](round-34)
 - [round 35](round-35)
 - [round 36](round-36)
+- [round 37](round-37)
