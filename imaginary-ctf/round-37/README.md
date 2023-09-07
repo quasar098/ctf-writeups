@@ -13,7 +13,7 @@ did well again, didn't want to commit to solving all of the challenges because i
 - [fuzziness](./fuzziness) unfinished
 - [cascade](./cascade) unfinished
 - [disorderly-conduct](./disorderly-conduct) unfinished
-- [cyberchef](./cyberchef) unfinished
+- [cyberchef](./cyberchef)
 - [you-can't-reverse-me](./you-can't-reverse-me) unfinished
 - [pwny](./pwny)
 - [army](./army) unfinished
