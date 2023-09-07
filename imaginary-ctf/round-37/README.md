@@ -11,15 +11,11 @@ did well again, didn't want to commit to solving all of the challenges because i
 - [time-signer](./time-signer) unfinished
 - [lfsrcrypt](./lfsrcrypt) unfinished
 - [fuzziness](./fuzziness) unfinished
-- [flitter](./flitter) unfinished
 - [cascade](./cascade) unfinished
-- [hash-it-out](./hash-it-out) unfinished
 - [disorderly-conduct](./disorderly-conduct) unfinished
 - [cyberchef](./cyberchef) unfinished
 - [you-can't-reverse-me](./you-can't-reverse-me) unfinished
 - [pwny](./pwny)
 - [army](./army) unfinished
-- [rustrust](./rustrust) unfinished
-- [pycryptojail](./pycryptojail) unfinished
 
 todo: finish writeups
