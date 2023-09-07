@@ -3,24 +3,23 @@
 did well again, didn't want to commit to solving all of the challenges because i don't know how to do all of them
 
 - [flag-in-url](./flag-in-url)
-- [sanity-check-round-37](./sanity-check-round-37)
-- [no-cigar](./no-cigar)
-- [seesawr-2.0](./seesawr-2.0)
-- [rather-sneaky-arithmetic](./rather-sneaky-arithmetic)
-- [xo64](./xo64)
-- [time-signer](./time-signer)
-- [lfsrcrypt](./lfsrcrypt)
-- [flag-in-url](./flag-in-url)
-- [fuzziness](./fuzziness)
-- [flitter](./flitter)
-- [cascade](./cascade)
-- [hash-it-out](./hash-it-out)
-- [disorderly-conduct](./disorderly-conduct)
-- [cyberchef](./cyberchef)
-- [you-can't-reverse-me](./you-can't-reverse-me)
+- [sanity-check-round-37](./sanity-check-round-37) unfinished
+- [no-cigar](./no-cigar) unfinished
+- [seesawr-2.0](./seesawr-2.0) unfinished
+- [rather-sneaky-arithmetic](./rather-sneaky-arithmetic) unfinished
+- [xor64](./xor64) unfinished
+- [time-signer](./time-signer) unfinished
+- [lfsrcrypt](./lfsrcrypt) unfinished
+- [fuzziness](./fuzziness) unfinished
+- [flitter](./flitter) unfinished
+- [cascade](./cascade) unfinished
+- [hash-it-out](./hash-it-out) unfinished
+- [disorderly-conduct](./disorderly-conduct) unfinished
+- [cyberchef](./cyberchef) unfinished
+- [you-can't-reverse-me](./you-can't-reverse-me) unfinished
 - [pwny](./pwny)
-- [army](./army)
-- [rustrust](./rustrust)
-- [pycryptojail](./pycryptojail)
+- [army](./army) unfinished
+- [rustrust](./rustrust) unfinished
+- [pycryptojail](./pycryptojail) unfinished
 
 todo: finish writeups
