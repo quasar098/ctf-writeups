@@ -9,13 +9,13 @@ did well again, didn't want to commit to solving all of the challenges because i
 - [rather-sneaky-arithmetic](./rather-sneaky-arithmetic)
 - [xor64](./xor64)
 - [time-signer](./time-signer) unfinished
-- [lfsrcrypt](./lfsrcrypt) unfinished
-- [fuzziness](./fuzziness) unfinished
+- [lfsrcrypt](./lfsrcrypt)
+- [fuzziness](./fuzziness)
 - [cascade](./cascade)
 - [disorderly-conduct](./disorderly-conduct) unfinished
 - [cyberchef](./cyberchef)
 - [you-can't-reverse-me](./you-can't-reverse-me) unfinished
 - [pwny](./pwny)
-- [army](./army) unfinished
+- [army](./army)
 
 todo: finish writeups
