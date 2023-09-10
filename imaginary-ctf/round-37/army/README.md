@@ -2,9 +2,23 @@
 
 ## problem
 
+But can you get a shell? (same attachments as pwny, the challenge runs on Ubuntu 20.)
+
 see [chal](./chal) and [libc.so.6](./libc.so.6) 
 
 ## solution
+
+one of the annoying things about this challenge is that it's arm64 which means i have to use qemu to run it and debug it which took hours to set up
+
+fortunately, this one wasn't too hard
+
+here we had to leak the libc address (an address close by to the libc address was on the stack iirc)
+
+we know the system address because it is always at a specified location if you know the libc address
+
+then, we had to overwrite the GOT PLT printf to redirect execution to the system() function, and because the vuln() also happens to print out whatever input you put in, we can put in `/bin/sh` as our next input to get a shell
+
+this solution also utilized the format string exploit (see [pwny](../pwny) for more info)
 
 ```py
 from pwn import *
