@@ -5,13 +5,13 @@ did well again, didn't want to commit to solving all of the challenges because i
 - [flag-in-url](./flag-in-url)
 - [sanity-check-round-37](./sanity-check-round-37)
 - [no-cigar](./no-cigar)
-- [seesawr-2.0](./seesawr-2.0) unfinished
+- [seesawr-2.0](./seesawr-2.0)
 - [rather-sneaky-arithmetic](./rather-sneaky-arithmetic) unfinished
 - [xor64](./xor64)
 - [time-signer](./time-signer) unfinished
 - [lfsrcrypt](./lfsrcrypt) unfinished
 - [fuzziness](./fuzziness) unfinished
-- [cascade](./cascade) unfinished
+- [cascade](./cascade)
 - [disorderly-conduct](./disorderly-conduct) unfinished
 - [cyberchef](./cyberchef)
 - [you-can't-reverse-me](./you-can't-reverse-me) unfinished
