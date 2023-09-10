@@ -6,7 +6,7 @@ did well again, didn't want to commit to solving all of the challenges because i
 - [sanity-check-round-37](./sanity-check-round-37)
 - [no-cigar](./no-cigar)
 - [seesawr-2.0](./seesawr-2.0)
-- [rather-sneaky-arithmetic](./rather-sneaky-arithmetic) unfinished
+- [rather-sneaky-arithmetic](./rather-sneaky-arithmetic)
 - [xor64](./xor64)
 - [time-signer](./time-signer) unfinished
 - [lfsrcrypt](./lfsrcrypt) unfinished
