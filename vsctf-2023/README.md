@@ -10,4 +10,4 @@ had lots of fun, one of my teammates solved a crypto chall (FlagHash) last minut
 
 - [cosmic-ray-v2](./cosmic-ray-v2)
 - [babyfunge](./babyfunge)
-- [not-last-minute-pyjail](./not-last-minute-pyjail)
+- [not-a-last-minute-pyjail](./not-a-last-minute-pyjail)
