@@ -8,4 +8,5 @@ had lots of fun, one of my teammates solved a crypto chall (FlagHash) last minut
 
 ## writeups
 
-todo do this
+- [cosmic-ray-v2](./cosmic-ray-v2)
+- [babyfunge](./babyfunge)
