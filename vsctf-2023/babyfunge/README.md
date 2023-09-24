@@ -1,5 +1,7 @@
 # babyfunge
 
+personally it was like a 4/10 on the difficulty scale because i am the esolang enjoyer
+
 ## problem
 
 ![image](https://github.com/quasar098/ctf-writeups/assets/70716985/f54b4ef0-9e13-40f4-a343-0b4ad171ce49)
