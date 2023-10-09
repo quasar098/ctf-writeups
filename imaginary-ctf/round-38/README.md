@@ -12,7 +12,7 @@ also needed a lot of help for the carry out chall because math hard
 - [c's_errors](./cs_errors) unfinished
 - [classloader](./classloader)
 - [litter](./litter)
-- [the-customer-is-always-right](./the-customer-is-always-right) unfinished
+- [the-customer-is-always-right](./the-customer-is-always-right)
 - [starry-night](./starry-night)
 - [carry-out](./carry-out)
 - [a-timely-manner](./a-timely-manner)
