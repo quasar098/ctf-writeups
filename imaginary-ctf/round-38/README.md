@@ -9,7 +9,7 @@ also needed a lot of help for the carry out chall because math hard
 - [sea's-air](./seas-air)
 - [long-hashing](./long-hashing)
 - [longer-hashing](./longer-hashing)
-- [c's_errors](./cs_errors) unfinished
+- [c's_errors](./cs-errors)
 - [classloader](./classloader)
 - [litter](./litter)
 - [the-customer-is-always-right](./the-customer-is-always-right)
