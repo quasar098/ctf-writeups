@@ -4,15 +4,15 @@ did fairly well i think, was not able to solve longest hashing and the house usu
 
 also needed a lot of help for the carry out chall because math hard
 
-- [exceptional-pyjail](./exceptional-pyjail) unfinished
+- [exceptional-pyjail](./exceptional-pyjail)
 - [base64-decryption](./base64-decryption)
-- [sea's-air](./seas-air) unfinished
-- [long-hashing](./long-hashing) unfinished
-- [longer-hashing](./longer-hashing) unfinished
+- [sea's-air](./seas-air)
+- [long-hashing](./long-hashing)
+- [longer-hashing](./longer-hashing)
 - [c's_errors](./cs_errors) unfinished
-- [classloader](./classloader) unfinished
-- [litter](./litter) unfinished
+- [classloader](./classloader)
+- [litter](./litter)
 - [the-customer-is-always-right](./the-customer-is-always-right) unfinished
 - [starry-night](./starry-night) unfinished
-- [carry-out](./carry-out) unfinished
-- [a-timely-manner](./a-timely-manner) unfinished
+- [carry-out](./carry-out)
+- [a-timely-manner](./a-timely-manner)
