@@ -13,3 +13,4 @@ ctf writeups
 - [sekai ctf 2023](sekaictf-2023)
 - [csaw ctf 2023](csaw-ctf-2023)
 - [vsctf 2023](vsctf-2023)
+- [sunshine ctf 2023](sunshinectf-2023)
