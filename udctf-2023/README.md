@@ -1,7 +1,6 @@
 # udctf-2023
 
-we got prize money yay
-
 ## problems
 
-todo do this
+- [python-jail](./python-jail)
+- [python-jail-harder](./python-jail-harder)
