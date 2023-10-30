@@ -30,4 +30,12 @@ If you're interested in connecting your own servers to each other and some sort 
 
 ## solution
 
-i logged onto the minecraft server and typed in `!get_build profninja/flag` and then `!get_computer` to get a command block computer which i could run to get the flag
+i logged onto the minecraft server on version 1.19.2
+
+then, i typed into chat the command `!get_build profninja/flag`
+
+then, i typed into chat the command `!get_computer`
+
+the get_computer command placed command blocks and gave me a button, which i could use to start the computer. the command block computer was using [mc86](https://www.youtube.com/watch?v=mqOSgJ0NM_Q), but i don't know where the chest with the commands was.
+
+anyways, clicking the button in game made the server build a greenhouse building which contained the flag on a sign
