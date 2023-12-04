@@ -15,3 +15,4 @@ ctf writeups
 - [vsctf 2023](vsctf-2023)
 - [sunshine ctf 2023](sunshinectf-2023)
 - [udctf 2023](udctf-2023)
+- [nbctf 2023](nbctf-2023)
