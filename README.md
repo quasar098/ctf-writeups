@@ -16,3 +16,4 @@ ctf writeups
 - [sunshine ctf 2023](sunshinectf-2023)
 - [udctf 2023](udctf-2023)
 - [nbctf 2023](nbctf-2023)
+- [dicectf 2024](dicectf-2024)
