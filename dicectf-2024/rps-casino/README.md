@@ -64,7 +64,7 @@ i just put it into z3
 
 i for some reason couldn't use a bitvec idk why it just wasn't working but the booleans seemed to work
 
-```
+```py
 from z3 import *
 from pwn import *
 
