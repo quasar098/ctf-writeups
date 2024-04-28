@@ -1,5 +1,7 @@
 # picklestar
 
+only 6 solves for some reason even though this was a super easy pickle chal
+
 ## problem
 
 challenge.py
