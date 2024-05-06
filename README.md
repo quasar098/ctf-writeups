@@ -25,3 +25,4 @@ ctf writeups
 - htb cyber apocalypse ctf 2024 (no writeups)
 - picoctf 2024 (no writeups)
 - [cr3 ctf 2024](cr3-ctf-2024)
+- [squ1rrel ctf 2024](squ1rrel-ctf-2024)
