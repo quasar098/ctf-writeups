@@ -10,7 +10,7 @@ see [./xterm_fun.bin](./xterm_fun.bin)
 
 we can see that the xterm_fun.bin is comprised of 
 
-```
+```terminal
 quasar@quasar098:~/Downloads$ cat xterm_fun.bin | xxd
 00000000: 1b5b 3c30 3b31 323b 324d 1b5b 3c30 3b35  .[<0;12;2M.[<0;5
 00000010: 3b38 6d1b 5b3c 303b 333b 324d 1b5b 3c30  ;8m.[<0;3;2M.[<0
