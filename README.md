@@ -27,4 +27,4 @@ ctf writeups
 - [cr3 ctf 2024](cr3-ctf-2024)
 - defcon quals ctf 2024 (no writeups)
 - [squ1rrel ctf 2024](squ1rrel-ctf-2024)
-- ångstromCTF 2024 (writeups soon)
+- [ångstromCTF 2024](angstromctf-2024)
