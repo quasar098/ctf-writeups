@@ -28,3 +28,4 @@ ctf writeups
 - [squ1rrel ctf 2024](squ1rrel-ctf-2024)
 - [ångstromCTF 2024](angstromctf-2024)
 - us cyber open 2024 (no writeups, yet)
+- vsctf 2024 (no writeups, yet)
