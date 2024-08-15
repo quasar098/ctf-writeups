@@ -30,3 +30,4 @@ ctf writeups
 - us cyber open 2024 (no writeups)
 - [vsctf 2024](vsctf-2024)
 - imaginary ctf 2024 (no writeups)
+- LIT ctf 2024 (no writeups)
